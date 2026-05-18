@@ -137,6 +137,8 @@ public class InfoServiceSqlImpl implements InfoService {
 								handler.handle(new Either.Left<>("error.date.format"));
 								return;
 							}
+						} else if (data.getValue(attr) instanceof Boolean) {
+							placeholders.append("?::boolean");
 						} else {
 							placeholders.append("?");
 						}
@@ -179,6 +181,8 @@ public class InfoServiceSqlImpl implements InfoService {
 					handler.handle(new Either.Left<>("error.date.format"));
 					return;
 				}
+			} else if (data.getValue(attr) instanceof Boolean) {
+				sb.append(" = ?::boolean, ");
 			} else {
 				sb.append(" = ?, ");
 			}
