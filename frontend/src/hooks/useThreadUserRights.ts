@@ -1,4 +1,4 @@
-import { useUser } from '@edifice.io/react';
+import { useUser } from '@open-ent/react';
 import { ThreadId } from '~/models/thread';
 import { getThreadUserRights } from '../utils/getThreadUserRights';
 import { useThread } from './useThread';

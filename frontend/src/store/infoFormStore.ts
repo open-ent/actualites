@@ -1,4 +1,4 @@
-import { ShareRight } from '@edifice.io/client';
+import { ShareRight } from '@open-ent/client';
 import { create } from 'zustand';
 import { InfoId, InfoStatus } from '~/models/info';
 import { ThreadId } from '~/models/thread';

@@ -1,6 +1,6 @@
 import { useI18n } from '~/hooks/useI18n';
 
-import { Flex, FormControl, Switch, useBreakpoint } from '@edifice.io/react';
+import { Flex, FormControl, Switch, useBreakpoint } from '@open-ent/react';
 import { useEffect } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { InfoDetailsFormParams } from '~/store/infoFormStore';

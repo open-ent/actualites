@@ -1,5 +1,5 @@
-import { Button, Flex, useDate } from '@edifice.io/react';
-import { IconCalendarEdit } from '@edifice.io/react/icons';
+import { Button, Flex, useDate } from '@open-ent/react';
+import { IconCalendarEdit } from '@open-ent/react/icons';
 import { useMemo, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useI18n } from '~/hooks/useI18n';

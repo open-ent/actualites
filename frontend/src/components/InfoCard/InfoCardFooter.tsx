@@ -1,6 +1,6 @@
-import { Button, Divider, Flex } from '@edifice.io/react';
-import { ViewsCounter } from '@edifice.io/react/audience';
-import { IconRafterDown, IconRafterUp } from '@edifice.io/react/icons';
+import { Button, Divider, Flex } from '@open-ent/react';
+import { ViewsCounter } from '@open-ent/react/audience';
+import { IconRafterDown, IconRafterUp } from '@open-ent/react/icons';
 import { lazy, Suspense } from 'react';
 import { useAudience } from '~/hooks/useAudience';
 import { useI18n } from '~/hooks/useI18n';

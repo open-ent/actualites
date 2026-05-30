@@ -5,8 +5,8 @@ import {
   Label,
   OptionsType,
   Select,
-} from '@edifice.io/react';
-import { IconQuestion } from '@edifice.io/react/icons';
+} from '@open-ent/react';
+import { IconQuestion } from '@open-ent/react/icons';
 import { useMemo } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { ThreadIcon } from '~/components/ThreadIcon';

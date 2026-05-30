@@ -1,4 +1,4 @@
-import { IUserInfo } from '@edifice.io/client';
+import { IUserInfo } from '@open-ent/client';
 import { useScreeb } from '@screeb/sdk-react';
 import { useCallback, useRef } from 'react';
 

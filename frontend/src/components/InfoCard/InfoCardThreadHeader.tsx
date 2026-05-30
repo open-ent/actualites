@@ -1,4 +1,4 @@
-import { AppIconSize, Flex, useBreakpoint } from '@edifice.io/react';
+import { AppIconSize, Flex, useBreakpoint } from '@open-ent/react';
 import { Thread } from '~/models/thread';
 import { ThreadIcon } from '../ThreadIcon';
 

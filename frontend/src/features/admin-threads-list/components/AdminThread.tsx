@@ -6,13 +6,13 @@ import {
   IconButton,
   IconButtonProps,
   useBreakpoint,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import {
   IconDelete,
   IconEdit,
   IconOptions,
   IconTool,
-} from '@edifice.io/react/icons';
+} from '@open-ent/react/icons';
 import { RefAttributes } from 'react';
 import { ThreadIcon } from '~/components/ThreadIcon';
 import { useI18n } from '~/hooks/useI18n';

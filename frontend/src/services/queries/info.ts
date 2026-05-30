@@ -1,4 +1,4 @@
-import { invalidateQueriesWithFirstPage } from '@edifice.io/react';
+import { invalidateQueriesWithFirstPage } from '@open-ent/react';
 import {
   infiniteQueryOptions,
   QueryClient,

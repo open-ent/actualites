@@ -1,4 +1,4 @@
-import { ViewsModal, ViewsModalProps } from '@edifice.io/react/audience';
+import { ViewsModal, ViewsModalProps } from '@open-ent/react/audience';
 import { InfoId } from '~/models/info';
 import { useInfoViewsDetails } from '~/services/queries';
 

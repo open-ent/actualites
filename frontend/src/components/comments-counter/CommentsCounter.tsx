@@ -1,6 +1,6 @@
-import { Button } from '@edifice.io/react';
-import { IconMessageInfo } from '@edifice.io/react/icons';
-import { StringUtils } from '@edifice.io/utilities';
+import { Button } from '@open-ent/react';
+import { IconMessageInfo } from '@open-ent/react/icons';
+import { StringUtils } from '@open-ent/utilities';
 import clsx from 'clsx';
 
 export interface CommentsCounterProps {

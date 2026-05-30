@@ -70,10 +70,23 @@ export default ({ mode }: { mode: string }) => {
     cacheDir: './node_modules/.vite/actualites',
 
     resolve: {
+      // Instance unique des libs partagées (sinon @open-ent/react peut embarquer une copie
+      // imbriquée de @open-ent/client → odeServices non initialisé).
+      dedupe: [
+        'react',
+        'react-dom',
+        '@tanstack/react-query',
+        'react-i18next',
+        'i18next',
+        '@open-ent/client',
+        '@open-ent/react',
+        '@open-ent/bootstrap',
+        '@open-ent/utilities',
+      ],
       alias: {
         '@images': resolve(
           __dirname,
-          'node_modules/@edifice.io/bootstrap/dist/images',
+          'node_modules/@open-ent/bootstrap/dist/images',
         ),
       },
     },
@@ -129,7 +142,7 @@ export default ({ mode }: { mode: string }) => {
       },
       server: {
         deps: {
-          inline: ['@edifice.io/react'],
+          inline: ['@open-ent/react'],
         },
       },
     },

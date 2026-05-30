@@ -1,5 +1,5 @@
-import { Button } from '@edifice.io/react';
-import { IconPlus } from '@edifice.io/react/icons';
+import { Button } from '@open-ent/react';
+import { IconPlus } from '@open-ent/react/icons';
 import { useState } from 'react';
 import { useI18n } from '~/hooks/useI18n';
 import { AdminThreadModal } from './AdminThreadModal';

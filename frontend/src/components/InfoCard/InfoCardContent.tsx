@@ -1,4 +1,4 @@
-import { Editor, EditorPreview } from '@edifice.io/react/editor';
+import { Editor, EditorPreview } from '@open-ent/react/editor';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { useInfoStatus } from '~/hooks/useInfoStatus';

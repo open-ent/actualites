@@ -1,6 +1,6 @@
 // import { useActionsStore } from '../store/actions';
 
-import { useEdificeClient } from '@edifice.io/react';
+import { useEdificeClient } from '@open-ent/react';
 import { useMemo } from 'react';
 import { CAN_USE_FALC, THREADS_CREATOR } from '~/config/rights';
 import { useThreadHasPreferences } from '~/services/queries';

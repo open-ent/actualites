@@ -1,4 +1,4 @@
-import { ButtonSkeleton, Flex } from '@edifice.io/react';
+import { ButtonSkeleton, Flex } from '@open-ent/react';
 import '../AdminThreadList.css';
 import { AdminThreadSkeleton } from './AdminThreadSkeleton';
 

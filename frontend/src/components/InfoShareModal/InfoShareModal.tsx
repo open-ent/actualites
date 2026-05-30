@@ -1,4 +1,4 @@
-import { ShareRight, ShareRightActionDisplayName } from '@edifice.io/client';
+import { ShareRight, ShareRightActionDisplayName } from '@open-ent/client';
 import {
   Alert,
   Button,
@@ -6,8 +6,8 @@ import {
   ShareOptions,
   ShareResources,
   ShareResourcesRef,
-} from '@edifice.io/react';
-import { IconSave } from '@edifice.io/react/icons';
+} from '@open-ent/react';
+import { IconSave } from '@open-ent/react/icons';
 import { useMemo, useRef, useState } from 'react';
 import { useI18n } from '~/hooks/useI18n';
 import { Info } from '~/models/info';

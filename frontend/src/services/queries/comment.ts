@@ -1,4 +1,4 @@
-import { useEdificeClient, useToast } from '@edifice.io/react';
+import { useEdificeClient, useToast } from '@open-ent/react';
 import {
   InfiniteData,
   queryOptions,

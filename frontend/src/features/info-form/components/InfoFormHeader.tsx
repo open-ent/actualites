@@ -1,4 +1,4 @@
-import { Flex, Stepper } from '@edifice.io/react';
+import { Flex, Stepper } from '@open-ent/react';
 import { useI18n } from '~/hooks/useI18n';
 import { useRouteType } from '~/hooks/useRouteType';
 import { InfoWorkflowStep, useInfoFormStore } from '~/store/infoFormStore';

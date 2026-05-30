@@ -1,4 +1,4 @@
-import { useDate } from '@edifice.io/react';
+import { useDate } from '@open-ent/react';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { MockedProviders } from '~/mocks/mockedProvider';
 import {

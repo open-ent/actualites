@@ -1,4 +1,4 @@
-import { Flex, Stepper, TextSkeleton } from '@edifice.io/react';
+import { Flex, Stepper, TextSkeleton } from '@open-ent/react';
 import { useRouteType } from '~/hooks/useRouteType';
 
 export function InfoFormHeaderSkeleton() {

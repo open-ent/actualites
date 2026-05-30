@@ -5,7 +5,7 @@ import {
   useBreakpoint,
   useDate,
   useDirectory,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import { useInfoStatus } from '~/hooks/useInfoStatus';
 import { Info } from '~/models/info';
 

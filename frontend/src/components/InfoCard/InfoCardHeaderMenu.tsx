@@ -1,4 +1,4 @@
-import { Button, Dropdown } from '@edifice.io/react';
+import { Button, Dropdown } from '@open-ent/react';
 import {
   IconDelete,
   IconEdit,
@@ -8,7 +8,7 @@ import {
   IconSubmitToValidate,
   IconWrite,
   IconPrint,
-} from '@edifice.io/react/icons';
+} from '@open-ent/react/icons';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useI18n } from '~/hooks/useI18n';

@@ -1,4 +1,4 @@
-import { Flex, useInfiniteScroll } from '@edifice.io/react';
+import { Flex, useInfiniteScroll } from '@open-ent/react';
 import { useEffect } from 'react';
 import { useHashScrolling } from '~/hooks/useHashScrolling';
 import { useInfoList } from '~/hooks/useInfoList';

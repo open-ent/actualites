@@ -1,4 +1,4 @@
-import { useToast } from '@edifice.io/react';
+import { useToast } from '@open-ent/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { INFO_DATES_RESET_VALUES } from '~/features';
