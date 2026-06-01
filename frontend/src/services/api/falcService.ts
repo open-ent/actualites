@@ -1,4 +1,4 @@
-import { ERROR_CODE, odeServices } from '@edifice.io/client';
+import { ERROR_CODE, odeServices } from '@open-ent/client';
 import { baseUrlAPI } from '.';
 
 export const createFalcService = () => {

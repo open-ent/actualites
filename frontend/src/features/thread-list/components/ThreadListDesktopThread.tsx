@@ -1,4 +1,4 @@
-import { Menu } from '@edifice.io/react';
+import { Menu } from '@open-ent/react';
 import { useNavigate } from 'react-router-dom';
 import { useThreadInfoParams } from '~/hooks/useThreadInfoParams';
 import { Thread } from '~/models/thread';

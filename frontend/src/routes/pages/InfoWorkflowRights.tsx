@@ -1,4 +1,4 @@
-import { ShareRight, ShareRightActionDisplayName } from '@edifice.io/client';
+import { ShareRight, ShareRightActionDisplayName } from '@open-ent/client';
 import {
   Alert,
   Button,
@@ -9,13 +9,13 @@ import {
   ShareResourcesRef,
   useBreakpoint,
   useUser,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import {
   IconArrowLeft,
   IconSave,
   IconSend,
   IconSubmitToValidate,
-} from '@edifice.io/react/icons';
+} from '@open-ent/react/icons';
 import { QueryClient } from '@tanstack/react-query';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {

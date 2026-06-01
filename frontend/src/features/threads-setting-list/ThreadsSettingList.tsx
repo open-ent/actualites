@@ -6,7 +6,7 @@ import {
   Flex,
   SearchBar,
   SegmentedControl,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import illuEmptyAdminThreads from '@images/emptyscreen/illu-actualites.svg';
 
 import { useI18n } from '~/hooks/useI18n';

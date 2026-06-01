@@ -1,4 +1,4 @@
-import { ButtonSkeleton, Flex, useBreakpoint } from '@edifice.io/react';
+import { ButtonSkeleton, Flex, useBreakpoint } from '@open-ent/react';
 import { useRouteType } from '~/hooks/useRouteType';
 
 export function InfoFormActionsSkeleton() {

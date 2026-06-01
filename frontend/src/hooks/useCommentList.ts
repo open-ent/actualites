@@ -1,5 +1,5 @@
-import { RightRole } from '@edifice.io/client';
-import { CommentProps } from 'node_modules/@edifice.io/react/dist/modules/comments/types';
+import { RightRole } from '@open-ent/client';
+import { CommentProps } from 'node_modules/@open-ent/react/dist/modules/comments/types';
 import { useMemo } from 'react';
 import { Info } from '~/models/info';
 import {

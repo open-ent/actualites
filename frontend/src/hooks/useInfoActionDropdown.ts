@@ -1,4 +1,4 @@
-import { useEdificeClient } from '@edifice.io/react';
+import { useEdificeClient } from '@open-ent/react';
 import { Info } from '~/models/info';
 import { getThreadUserRights } from '~/utils/getThreadUserRights';
 import { useInfoStatus } from './useInfoStatus';

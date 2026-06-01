@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { LoadingScreen, useEdificeTheme } from '@edifice.io/react';
+import { LoadingScreen, useEdificeTheme } from '@open-ent/react';
 
 import { useTranslation } from 'react-i18next';
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';

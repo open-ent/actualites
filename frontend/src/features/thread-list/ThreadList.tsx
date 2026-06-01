@@ -1,4 +1,4 @@
-import { Grid, useBreakpoint } from '@edifice.io/react';
+import { Grid, useBreakpoint } from '@open-ent/react';
 import { ThreadListDesktop, ThreadListMobile } from './components';
 import clsx from 'clsx';
 

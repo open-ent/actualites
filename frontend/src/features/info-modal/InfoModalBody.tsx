@@ -1,4 +1,4 @@
-import { Editor } from '@edifice.io/react/editor';
+import { Editor } from '@open-ent/react/editor';
 import { useEffect } from 'react';
 import { useAudience } from '~/hooks/useAudience';
 import { useInfoStatus } from '~/hooks/useInfoStatus';

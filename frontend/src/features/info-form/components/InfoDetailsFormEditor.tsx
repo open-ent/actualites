@@ -1,5 +1,5 @@
-import { FormControl, Label } from '@edifice.io/react';
-import { Editor, EditorInstance, EditorRef } from '@edifice.io/react/editor';
+import { FormControl, Label } from '@open-ent/react';
+import { Editor, EditorInstance, EditorRef } from '@open-ent/react/editor';
 import { lazy, Suspense, useEffect, useRef } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { TextSimplifierRef } from '~/components/text-simplifier/TextSimplifier';

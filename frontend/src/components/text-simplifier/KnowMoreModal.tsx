@@ -1,5 +1,5 @@
-import { Button, Flex, useToggle } from '@edifice.io/react';
-import { IconRafterDown } from '@edifice.io/react/icons';
+import { Button, Flex, useToggle } from '@open-ent/react';
+import { IconRafterDown } from '@open-ent/react/icons';
 import { PortalModal } from '~/components/PortalModal';
 import { useI18n } from '~/hooks/useI18n';
 import { Expandable } from '../Expandable';

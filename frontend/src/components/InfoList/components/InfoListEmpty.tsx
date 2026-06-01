@@ -1,4 +1,4 @@
-import { EmptyScreen, Flex } from '@edifice.io/react';
+import { EmptyScreen, Flex } from '@open-ent/react';
 // import { useTranslation } from 'react-i18next';
 
 import illuEmptyCreate from '@images/emptyscreen/illu-blog.svg';

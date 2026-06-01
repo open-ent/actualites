@@ -1,4 +1,4 @@
-import { odeServices } from '@edifice.io/client';
+import { odeServices } from '@open-ent/client';
 import { Comment, CommentId } from '~/models/comments';
 import { baseUrlAPI } from '.';
 import { InfoId } from '../../models/info';

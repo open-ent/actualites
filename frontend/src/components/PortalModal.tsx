@@ -1,4 +1,4 @@
-import { Modal, ModalElement, ModalProps } from '@edifice.io/react';
+import { Modal, ModalElement, ModalProps } from '@open-ent/react';
 import { ReactNode, Ref, forwardRef } from 'react';
 import { createPortal } from 'react-dom';
 

@@ -1,4 +1,4 @@
-import { CommentProvider } from '@edifice.io/react/comments';
+import { CommentProvider } from '@open-ent/react/comments';
 import { useCommentList } from '~/hooks/useCommentList';
 import { Info } from '~/models/info';
 

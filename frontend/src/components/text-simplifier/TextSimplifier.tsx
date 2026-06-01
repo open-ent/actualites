@@ -1,4 +1,4 @@
-import { ERROR_CODE, ErrorCode } from '@edifice.io/client';
+import { ERROR_CODE, ErrorCode } from '@open-ent/client';
 import {
   Alert,
   Button,
@@ -6,14 +6,14 @@ import {
   useEdificeClient,
   useToast,
   useToggle,
-} from '@edifice.io/react';
-import { EditorRef } from '@edifice.io/react/editor';
+} from '@open-ent/react';
+import { EditorRef } from '@open-ent/react/editor';
 import {
   IconAlertTriangle,
   IconCopy,
   IconRafterDown,
   IconRafterUp,
-} from '@edifice.io/react/icons';
+} from '@open-ent/react/icons';
 import { useScreeb } from '@screeb/sdk-react';
 import clsx from 'clsx';
 import {
