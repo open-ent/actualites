@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { useDate } from '@edifice.io/react';
+import { useDate } from '@open-ent/react';
 
 interface UseInfoDetailsFormDatesModalProps {
   publicationDate: Date;

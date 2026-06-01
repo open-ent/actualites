@@ -1,7 +1,7 @@
 import { useI18n } from '~/hooks/useI18n';
 
-import { Button, Flex, useBreakpoint, useToast } from '@edifice.io/react';
-import { IconArrowRight, IconSave } from '@edifice.io/react/icons';
+import { Button, Flex, useBreakpoint, useToast } from '@open-ent/react';
+import { IconArrowRight, IconSave } from '@open-ent/react/icons';
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useInfoFormStore } from '~/store/infoFormStore';

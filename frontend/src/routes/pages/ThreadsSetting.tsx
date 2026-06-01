@@ -1,5 +1,5 @@
-import { Button, Flex } from '@edifice.io/react';
-import { IconArrowLeft } from '@edifice.io/react/icons';
+import { Button, Flex } from '@open-ent/react';
+import { IconArrowLeft } from '@open-ent/react/icons';
 import { QueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { ThreadsSettingList, ThreadsSettingListSkeleton } from '~/features';

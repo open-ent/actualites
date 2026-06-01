@@ -4,8 +4,8 @@ import {
   Dropdown,
   Flex,
   useBreakpoint,
-} from '@edifice.io/react';
-import { IconBulletList } from '@edifice.io/react/icons';
+} from '@open-ent/react';
+import { IconBulletList } from '@open-ent/react/icons';
 import { clsx } from 'clsx';
 import { useNavigate } from 'react-router-dom';
 import { ThreadIcon } from '~/components/ThreadIcon';

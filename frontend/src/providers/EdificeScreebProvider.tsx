@@ -1,4 +1,4 @@
-import { useEdificeClient } from '@edifice.io/react';
+import { useEdificeClient } from '@open-ent/react';
 import { ScreebProvider, useScreeb } from '@screeb/sdk-react';
 import { ReactNode, useEffect } from 'react';
 import { useScreebIdentity } from '~/hooks/useScreebIdentity';

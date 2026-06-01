@@ -1,4 +1,4 @@
-import { EdificeThemeProvider } from '@edifice.io/react';
+import { EdificeThemeProvider } from '@open-ent/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { render } from './setup';
 

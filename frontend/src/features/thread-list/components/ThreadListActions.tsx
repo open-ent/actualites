@@ -1,5 +1,5 @@
-import { Button, ButtonSkeleton, useScrollToTop } from '@edifice.io/react';
-import { IconAdjustSettings, IconSettings } from '@edifice.io/react/icons';
+import { Button, ButtonSkeleton, useScrollToTop } from '@open-ent/react';
+import { IconAdjustSettings, IconSettings } from '@open-ent/react/icons';
 import { useNavigate } from 'react-router-dom';
 import { useI18n } from '~/hooks/useI18n';
 import { useThreadsUserRights } from '~/hooks/useThreadsUserRights';

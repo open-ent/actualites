@@ -4,8 +4,8 @@ import {
   Flex,
   Image,
   TextSkeleton,
-} from '@edifice.io/react';
-import { EditorPreviewSkeleton } from '@edifice.io/react/editor';
+} from '@open-ent/react';
+import { EditorPreviewSkeleton } from '@open-ent/react/editor';
 import React from 'react';
 
 export const InfoCardSkeleton = React.forwardRef<

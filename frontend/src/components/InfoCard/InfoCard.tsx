@@ -1,4 +1,4 @@
-import { Alert, Card, useDate } from '@edifice.io/react';
+import { Alert, Card, useDate } from '@open-ent/react';
 import clsx from 'clsx';
 import { useCallback, useState } from 'react';
 import { useAudience } from '~/hooks/useAudience';

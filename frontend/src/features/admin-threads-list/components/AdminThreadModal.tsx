@@ -15,8 +15,8 @@ import {
   Select,
   useEdificeClient,
   useMediaLibrary,
-} from '@edifice.io/react';
-import { IconFilter } from '@edifice.io/react/icons';
+} from '@open-ent/react';
+import { IconFilter } from '@open-ent/react/icons';
 import { createPortal } from 'react-dom';
 import {
   Controller,

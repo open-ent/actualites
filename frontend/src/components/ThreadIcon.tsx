@@ -4,8 +4,8 @@ import {
   Flex,
   Image,
   useEdificeClient,
-} from '@edifice.io/react';
-import { IconHide } from '@edifice.io/react/icons';
+} from '@open-ent/react';
+import { IconHide } from '@open-ent/react/icons';
 import { Thread } from '~/models/thread';
 import './ThreadIcon.css';
 

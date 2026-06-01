@@ -1,4 +1,4 @@
-import { FormControl, Input, Label } from '@edifice.io/react';
+import { FormControl, Input, Label } from '@open-ent/react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useI18n } from '~/hooks/useI18n';
 import { InfoDetailsFormParams } from '~/store/infoFormStore';

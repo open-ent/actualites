@@ -1,4 +1,4 @@
-import { ButtonSkeleton, Flex, Image, TextSkeleton } from '@edifice.io/react';
+import { ButtonSkeleton, Flex, Image, TextSkeleton } from '@open-ent/react';
 
 export function AdminThreadSkeleton() {
   return (

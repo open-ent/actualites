@@ -1,4 +1,4 @@
-import { ViewsCounters } from '@edifice.io/client';
+import { ViewsCounters } from '@open-ent/client';
 import { create } from 'zustand';
 import { InfoId } from '~/models/info';
 import { createSelectors } from './createSelectors';

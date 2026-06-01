@@ -17,10 +17,10 @@ const mocks = vi.hoisted(() => ({
   useUser: vi.fn(() => ({ user: mockUserLogged })),
 }));
 
-vi.mock('@edifice.io/react', async () => {
+vi.mock('@open-ent/react', async () => {
   const actual =
-    await vi.importActual<typeof import('@edifice.io/react')>(
-      '@edifice.io/react',
+    await vi.importActual<typeof import('@open-ent/react')>(
+      '@open-ent/react',
     );
   return {
     ...actual,
@@ -28,7 +28,7 @@ vi.mock('@edifice.io/react', async () => {
   };
 });
 
-//Mocked the @edifice.io/react/editor module so Editor render simple divs in tests;
+//Mocked the @open-ent/react/editor module so Editor render simple divs in tests;
 // this avoids tiptap’s error when rendering the editor in tests more than once. This is a workaround.
 type EditorMockProps = {
   content?: ReactNode;
@@ -39,10 +39,10 @@ const createMockEditorComponent =
   ({ content }: EditorMockProps) =>
     createElement('div', { 'data-testid': `mock-${displayName}` }, content);
 
-vi.mock('@edifice.io/react/editor', async () => {
+vi.mock('@open-ent/react/editor', async () => {
   const actual = await vi.importActual<
-    typeof import('@edifice.io/react/editor')
-  >('@edifice.io/react/editor');
+    typeof import('@open-ent/react/editor')
+  >('@open-ent/react/editor');
   return {
     ...actual,
     Editor: createMockEditorComponent('editor'),

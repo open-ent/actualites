@@ -1,4 +1,4 @@
-import { useToast } from '@edifice.io/react';
+import { useToast } from '@open-ent/react';
 import { useState } from 'react';
 import { useI18n } from '~/hooks/useI18n';
 import { InfoDetails, InfoExtendedStatus } from '~/models/info';

@@ -1,4 +1,4 @@
-import { Flex } from '@edifice.io/react';
+import { Flex } from '@open-ent/react';
 import { QueryClient } from '@tanstack/react-query';
 import { LoaderFunctionArgs, Outlet } from 'react-router-dom';
 import './InfoWorkflow.css';

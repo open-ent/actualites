@@ -1,5 +1,5 @@
-import { StringUtils } from '@edifice.io/client';
-import { useDebounce } from '@edifice.io/react';
+import { StringUtils } from '@open-ent/client';
+import { useDebounce } from '@open-ent/react';
 import {
   ChangeEvent,
   useEffect,

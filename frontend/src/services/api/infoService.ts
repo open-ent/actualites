@@ -1,4 +1,4 @@
-import { odeServices, ShareRight } from '@edifice.io/client';
+import { odeServices, ShareRight } from '@open-ent/client';
 import { checkHttpError } from '~/utils/checkHttpError';
 import { baseUrl, baseUrlAPI } from '.';
 import {

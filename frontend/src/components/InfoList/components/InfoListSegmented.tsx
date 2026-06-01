@@ -1,4 +1,4 @@
-import { SegmentedControl } from '@edifice.io/react';
+import { SegmentedControl } from '@open-ent/react';
 import { useMemo } from 'react';
 import { useInfoStats } from '~/components/InfoList/hooks/useInfoStats';
 import { useI18n } from '~/hooks/useI18n';

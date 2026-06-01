@@ -1,4 +1,4 @@
-import { useUser } from '@edifice.io/react';
+import { useUser } from '@open-ent/react';
 import { useMemo } from 'react';
 import { Thread, ThreadId, ThreadListFilter } from '~/models/thread';
 import { useThreads } from '~/services/queries';

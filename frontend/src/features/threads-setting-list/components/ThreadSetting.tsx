@@ -4,7 +4,7 @@ import {
   Flex,
   useBreakpoint,
   useEdificeClient,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import { clsx } from 'clsx';
 import { ChangeEvent } from 'react';
 import { ThreadIcon } from '~/components/ThreadIcon';

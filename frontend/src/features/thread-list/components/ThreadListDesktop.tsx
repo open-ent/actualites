@@ -1,5 +1,5 @@
-import { ButtonSkeleton, Flex, Menu } from '@edifice.io/react';
-import { IconBulletList } from '@edifice.io/react/icons';
+import { ButtonSkeleton, Flex, Menu } from '@open-ent/react';
+import { IconBulletList } from '@open-ent/react/icons';
 import { useNavigate } from 'react-router-dom';
 import { useI18n } from '~/hooks/useI18n';
 import { useThreadInfoParams } from '~/hooks/useThreadInfoParams';

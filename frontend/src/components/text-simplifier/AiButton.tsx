@@ -1,4 +1,4 @@
-import { Button, ButtonProps, ButtonRef } from '@edifice.io/react';
+import { Button, ButtonProps, ButtonRef } from '@open-ent/react';
 import clsx from 'clsx';
 import { forwardRef, Ref } from 'react';
 import './AiButton.css';

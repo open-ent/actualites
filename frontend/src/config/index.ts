@@ -6,7 +6,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-import { ACTION, ActionType, IAction } from '@edifice.io/client';
+import { ACTION, ActionType, IAction } from '@open-ent/client';
 import { CAN_USE_FALC, THREADS_CREATOR } from './rights';
 
 export const existingActions: IAction[] = [

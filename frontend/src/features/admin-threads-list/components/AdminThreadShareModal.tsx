@@ -1,4 +1,4 @@
-import { ShareRight, ShareRightActionDisplayName } from '@edifice.io/client';
+import { ShareRight, ShareRightActionDisplayName } from '@open-ent/client';
 import {
   Alert,
   Button,
@@ -7,7 +7,7 @@ import {
   ShareResources,
   ShareResourcesRef,
   useToast,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

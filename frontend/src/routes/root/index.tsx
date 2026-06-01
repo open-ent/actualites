@@ -6,11 +6,11 @@ import {
   LoadingScreen,
   useBreakpoint,
   useEdificeClient,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 
 import { Outlet, useLoaderData } from 'react-router-dom';
 
-import { IWebApp } from '@edifice.io/client';
+import { IWebApp } from '@open-ent/client';
 import clsx from 'clsx';
 import { existingActions } from '~/config';
 import { AdminNewThreadButton } from '~/features';

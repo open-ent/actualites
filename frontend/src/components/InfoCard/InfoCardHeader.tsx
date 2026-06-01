@@ -7,14 +7,14 @@ import {
   IconButtonProps,
   Image,
   useBreakpoint,
-} from '@edifice.io/react';
+} from '@open-ent/react';
 import {
   IconClock,
   IconClockAlert,
   IconOptions,
   IconSubmitToValidate,
   IconWrite,
-} from '@edifice.io/react/icons';
+} from '@open-ent/react/icons';
 import clsx from 'clsx';
 import { RefAttributes, useState } from 'react';
 import { useNavigate } from 'react-router-dom';

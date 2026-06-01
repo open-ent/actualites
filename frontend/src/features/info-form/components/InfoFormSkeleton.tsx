@@ -4,8 +4,8 @@ import {
   Switch,
   TextSkeleton,
   useBreakpoint,
-} from '@edifice.io/react';
-import { EditorSkeleton } from '@edifice.io/react/editor';
+} from '@open-ent/react';
+import { EditorSkeleton } from '@open-ent/react/editor';
 import { ThreadId } from '~/models/thread';
 import './InfoDetailsForm.css';
 

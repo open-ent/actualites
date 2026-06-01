@@ -1,9 +1,9 @@
-import { Button, EmptyScreen, Flex, SearchBar } from '@edifice.io/react';
+import { Button, EmptyScreen, Flex, SearchBar } from '@open-ent/react';
 import illuEmptyAdminThreads from '@images/emptyscreen/illu-actualites.svg';
 import { useI18n } from '~/hooks/useI18n';
 import { useThreadsUserRights } from '~/hooks/useThreadsUserRights';
 
-import { StringUtils } from '@edifice.io/client';
+import { StringUtils } from '@open-ent/client';
 import { ChangeEvent, useCallback, useMemo, useState } from 'react';
 import { PortalModal } from '~/components/PortalModal';
 import { InfoStatus } from '~/models/info';
