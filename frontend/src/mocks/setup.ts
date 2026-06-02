@@ -19,9 +19,7 @@ const mocks = vi.hoisted(() => ({
 
 vi.mock('@open-ent/react', async () => {
   const actual =
-    await vi.importActual<typeof import('@open-ent/react')>(
-      '@open-ent/react',
-    );
+    await vi.importActual<typeof import('@open-ent/react')>('@open-ent/react');
   return {
     ...actual,
     useUser: mocks.useUser,
@@ -40,9 +38,9 @@ const createMockEditorComponent =
     createElement('div', { 'data-testid': `mock-${displayName}` }, content);
 
 vi.mock('@open-ent/react/editor', async () => {
-  const actual = await vi.importActual<
-    typeof import('@open-ent/react/editor')
-  >('@open-ent/react/editor');
+  const actual = await vi.importActual<typeof import('@open-ent/react/editor')>(
+    '@open-ent/react/editor',
+  );
   return {
     ...actual,
     Editor: createMockEditorComponent('editor'),
