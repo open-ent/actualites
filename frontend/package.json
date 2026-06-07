@@ -38,9 +38,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "6.1.0",
-    "@open-ent/bootstrap": "^2.5.26",
-    "@open-ent/client": "^2.5.26",
-    "@open-ent/react": "^2.5.26",
+    "@open-ent/bootstrap": "^2.5.29",
+    "@open-ent/client": "^2.5.29",
+    "@open-ent/react": "^2.5.29",
     "@open-ent/utilities": "^2.5.26",
     "@react-spring/web": "9.7.5",
     "@screeb/sdk-react": "0.6.0",
