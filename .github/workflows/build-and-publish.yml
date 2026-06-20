@@ -137,7 +137,10 @@ jobs:
         run: |
           ENTCORE_OPT=""
           if [ -n "$ENTCORE_VERSION" ]; then ENTCORE_OPT="-DentCoreVersion=$ENTCORE_VERSION"; fi
-          mvn clean package -DskipTests -B $ENTCORE_OPT
+          # buildnumber-maven-plugin (via app-parent) ne résout pas le SCM en CI (checkout shallow/detached)
+          # -> on injecte explicitement le commit et la branche pour remplir SCM-Commit-Id / SCM-Branch du MANIFEST.
+          mvn clean package -DskipTests -B $ENTCORE_OPT \
+            -DbuildNumber="${GITHUB_SHA::8}" -DscmBranch="${GITHUB_REF_NAME}"
         env:
           ENTCORE_VERSION: ${{ github.event.inputs.entcore_version }}
 
