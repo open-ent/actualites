@@ -1,0 +1,20 @@
+{
+  "news": "News",
+  "news.info-shared": "Sharing of a news item",
+  "news.news-comment": "Comment on a news item (only for the author of the news item and the thread managers)",
+  "news.news-published": "Publication of a news item",
+  "news.news-submitted": "Validation request for a news item",
+  "news.news-update": "Update of a news item",
+  "news.thread-shared": "Sharing of a news thread",
+  "push.notif.actu.info.published": "New news item ",
+  "timeline.actu.info.comment": "commented on the news item ",
+  "timeline.actu.info.published": "published the news item ",
+  "timeline.actu.info.shared": "shared the news item with you ",
+  "timeline.actu.info.submitted": "sent a new news item for validation: ",
+  "timeline.actu.info.update": "updated the news item ",
+  "timeline.actu.thread.shared": "shared the news thread with you ",
+  "user.personnel.deleted": "Former staff member",
+  "user.relative.deleted": "Former parent",
+  "user.student.deleted": "Former student",
+  "user.teacher.deleted": "Former teacher"
+}
