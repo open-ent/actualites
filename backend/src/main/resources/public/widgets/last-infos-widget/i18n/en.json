@@ -1,0 +1,14 @@
+{
+  "actualites.widget.author": "Author",
+  "actualites.widget.bad.request.invalid.size": "Invalid number of news items: please choose a number between 1 and 20.",
+  "actualites.widget.bad.request.size.must.be.an.integer": "Invalid number of news items: please use a number.",
+  "actualites.widget.config": "Configure",
+  "actualites.widget.config.cancel": "Cancel",
+  "actualites.widget.config.nbr": "Number of news items to display",
+  "actualites.widget.config.save": "Save",
+  "actualites.widget.config.title": "Configuration",
+  "actualites.widget.empty": "No news",
+  "actualites.widget.thread": "Thread",
+  "actualites.widget.title": "News",
+  "last-infos-widget": "News"
+}
