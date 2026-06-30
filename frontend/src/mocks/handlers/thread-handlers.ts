@@ -79,4 +79,8 @@ export const threadHandlers = [
       return HttpResponse.json(undefined, { status: 200 });
     },
   ),
+  // L'utilisateur a-t-il des préférences de fil enregistrées
+  http.get(`${baseUrlAPI}/me/thread-preferences/exists`, () =>
+    HttpResponse.json({ hasThreadPreference: false }, { status: 200 }),
+  ),
 ];
