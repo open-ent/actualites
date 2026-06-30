@@ -74,6 +74,7 @@
   "actualites.info.createForm.details.subtitle": "Saisir le contenu de votre actualité ",
   "actualites.info.createForm.details.title": "Création d’une actualité",
   "actualites.info.createForm.draftSaved": "L'actualité a été enregistrée en brouillon",
+  "actualites.info.createForm.saveError": "L'enregistrement de l'actualité a échoué",
   "actualites.info.createForm.headlineLabel": "Mettre en avant",
   "actualites.info.createForm.nextStep": "Suivant",
   "actualites.info.createForm.pendingSuccess": "L’actualité a été soumise aux valideurs du fil “[[threadName]]” pour publication.",

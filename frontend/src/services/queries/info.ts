@@ -179,6 +179,10 @@ export const useCreateDraftInfo = () => {
     onMutate: async (payload) => {
       updateStatsQueryCache(payload.thread_id, InfoStatus.DRAFT, 1);
     },
+    // En cas d'échec, on annule l'incrément optimiste du compteur DRAFT.
+    onError: (_error, payload) => {
+      updateStatsQueryCache(payload.thread_id, InfoStatus.DRAFT, -1);
+    },
   });
 };
 

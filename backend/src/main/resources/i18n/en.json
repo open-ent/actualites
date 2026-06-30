@@ -74,6 +74,7 @@
   "actualites.info.createForm.details.subtitle": "Enter the content of your news item ",
   "actualites.info.createForm.details.title": "Creating a news item",
   "actualites.info.createForm.draftSaved": "The news item has been saved as a draft",
+  "actualites.info.createForm.saveError": "Failed to save the news item",
   "actualites.info.createForm.headlineLabel": "Highlight",
   "actualites.info.createForm.nextStep": "Next",
   "actualites.info.createForm.pendingSuccess": "The news item has been submitted to the validators of the thread “[[threadName]]” for publication.",

@@ -433,15 +433,22 @@ public class InfosControllerV1 extends ControllerHelper {
 			RequestUtils.bodyToJson(request, pathPrefix + SCHEMA_INFO_CREATE, resource -> {
 				LOGGER.info(String.format("User %s create an info", user.getUserId()));
 
-				String status  = resource.getString("status");
-				if (StringUtils.isEmpty(status) || !(status.equals("1") || status.equals("2"))) {
+				// Le statut est optionnel : par défaut DRAFT (création d'un brouillon depuis le front).
+				// Il doit valoir 1 (DRAFT) ou 2 (PENDING). NB : status est un entier, comme dans le
+				// schéma JSON et dans updateInfo()/createPublishedInfo() (incohérence corrigée ici).
+				Integer status = resource.getInteger("status");
+				if (status == null) {
+					status = 1; // DRAFT par défaut
+					resource.put("status", status);
+				}
+				if (status != 1 && status != 2) {
 					JsonObject error = new JsonObject().put("error", "Status should be in DRAFT or PENDING");
 					renderJson(request, error, 400);
 					return;
 				}
 				resource.put("published", false);
 				initExpirationDate(resource);
-				Events events = resource.getString("status").equals("1") ? Events.DRAFT : Events.CREATE_AND_PENDING;
+				Events events = status == 1 ? Events.DRAFT : Events.CREATE_AND_PENDING;
 
 				Handler<Either<String, JsonObject>> handler = eventHelper.onCreateResource(request, RESOURCE_NAME, notEmptyResponseHandler(request));
 				if (events == Events.CREATE_AND_PENDING) {
