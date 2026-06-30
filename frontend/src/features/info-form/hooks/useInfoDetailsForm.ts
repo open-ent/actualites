@@ -61,6 +61,11 @@ export function useInfoDetailsForm() {
             resetDetailsForm?.();
             onSuccess?.({ id });
           },
+          // Évite un chargement infini en cas d'échec de l'enregistrement.
+          onError: () => {
+            setIsSaving(false);
+            toast.error(t('actualites.info.createForm.saveError'));
+          },
         },
       );
     } else {
@@ -88,6 +93,11 @@ export function useInfoDetailsForm() {
             invalidateThreadQueries(queryClient, {
               threadId: Number(infoFormValues.thread_id),
             });
+          },
+          // Évite un chargement infini en cas d'échec de la création du brouillon.
+          onError: () => {
+            setIsSaving(false);
+            toast.error(t('actualites.info.createForm.saveError'));
           },
         },
       );

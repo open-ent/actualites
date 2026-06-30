@@ -109,7 +109,9 @@ BEGIN
     SELECT COUNT(*) INTO old_info_count FROM actualites.info_shares_backup_028;
     SELECT COUNT(*) INTO new_info_count FROM actualites.info_shares;
     
-    reduction_pct := ROUND(((old_thread_count + old_info_count - new_thread_count - new_info_count)::NUMERIC / (old_thread_count + old_info_count)::NUMERIC * 100), 2);
+    -- NULLIF évite la division par zéro sur une base vierge (tables de partage vides) :
+    -- sans ce garde-fou, le script échoue et fait échouer toute l'initialisation du schéma actualites.
+    reduction_pct := COALESCE(ROUND(((old_thread_count + old_info_count - new_thread_count - new_info_count)::NUMERIC / NULLIF(old_thread_count + old_info_count, 0)::NUMERIC * 100), 2), 0);
     
     RAISE NOTICE '=== Migration 028 Statistics ===';
     RAISE NOTICE 'thread_shares: % -> % rows', old_thread_count, new_thread_count;
