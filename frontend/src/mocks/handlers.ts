@@ -1,3 +1,4 @@
+import { appHandlers } from './handlers/app-handlers';
 import { commentHandlers } from './handlers/comment-handlers';
 import { falcHandlers } from './handlers/falc-handlers';
 import { i18nHandlers } from './handlers/i18n-handlers';
@@ -10,4 +11,5 @@ export const handlers = [
   ...infoHandlers,
   ...commentHandlers,
   ...falcHandlers,
+  ...appHandlers,
 ];
