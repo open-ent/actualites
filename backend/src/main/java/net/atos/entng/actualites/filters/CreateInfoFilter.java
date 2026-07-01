@@ -34,6 +34,12 @@ public class CreateInfoFilter implements ResourcesProvider {
             } else if (request.path().contains("/published")) {
                 // For /api/v1/infos/published endpoint, status is set by the controller
                 status = 3;
+            } else {
+                // Création d'un brouillon : le front n'envoie pas de champ "status".
+                // On applique le même défaut que le contrôleur (createInfo) : DRAFT (1),
+                // qui requiert le droit CONTRIB. Sans ce défaut, status restait null et
+                // le filtre refusait toute création de brouillon (401).
+                status = 1;
             }
 
             if (!StringUtils.isEmpty(id) && (parseId(id) instanceof Integer) && status != null) {
