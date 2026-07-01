@@ -424,10 +424,6 @@ public class InfosControllerV1 extends ControllerHelper {
 		}
 	}
 
-	@Post("/api/v1/infos")
-	@ApiDoc("Create an info in pending or draft")
-	@ResourceFilter(CreateInfoFilter.class)
-	@SecuredAction(value = THREAD_CONTRIB_VALUE, type = ActionType.RESOURCE, right = THREAD_CONTRIB_ANNOTATION)
 	/**
 	 * Normalise et valide le champ {@code status} pour la création d'une actualité.
 	 * <p>Le statut est optionnel : lorsqu'il est absent (cas du brouillon créé depuis le front),
@@ -447,6 +443,10 @@ public class InfosControllerV1 extends ControllerHelper {
 		return status == 1 || status == 2;
 	}
 
+	@Post("/api/v1/infos")
+	@ApiDoc("Create an info in pending or draft")
+	@ResourceFilter(CreateInfoFilter.class)
+	@SecuredAction(value = THREAD_CONTRIB_VALUE, type = ActionType.RESOURCE, right = THREAD_CONTRIB_ANNOTATION)
 	public void createInfo(HttpServerRequest request) {
 		UserUtils.getUserInfos(eb, request, user -> {
 			RequestUtils.bodyToJson(request, pathPrefix + SCHEMA_INFO_CREATE, resource -> {
