@@ -428,6 +428,25 @@ public class InfosControllerV1 extends ControllerHelper {
 	@ApiDoc("Create an info in pending or draft")
 	@ResourceFilter(CreateInfoFilter.class)
 	@SecuredAction(value = THREAD_CONTRIB_VALUE, type = ActionType.RESOURCE, right = THREAD_CONTRIB_ANNOTATION)
+	/**
+	 * Normalise et valide le champ {@code status} pour la création d'une actualité.
+	 * <p>Le statut est optionnel : lorsqu'il est absent (cas du brouillon créé depuis le front),
+	 * il est renseigné à DRAFT (1) directement dans {@code resource}. Il doit ensuite valoir
+	 * 1 (DRAFT) ou 2 (PENDING). Le statut est traité en <b>entier</b>, en cohérence avec le
+	 * schéma JSON et avec {@code updateInfo()} / {@code createPublishedInfo()}.
+	 *
+	 * @param resource corps de la requête, modifié en place (status renseigné si absent)
+	 * @return {@code true} si le statut est valide, {@code false} sinon (le contrôleur répond alors 400)
+	 */
+	static boolean normalizeAndValidateCreateStatus(JsonObject resource) {
+		Integer status = resource.getInteger("status");
+		if (status == null) {
+			status = 1; // DRAFT par défaut
+			resource.put("status", status);
+		}
+		return status == 1 || status == 2;
+	}
+
 	public void createInfo(HttpServerRequest request) {
 		UserUtils.getUserInfos(eb, request, user -> {
 			RequestUtils.bodyToJson(request, pathPrefix + SCHEMA_INFO_CREATE, resource -> {
@@ -436,16 +455,12 @@ public class InfosControllerV1 extends ControllerHelper {
 				// Le statut est optionnel : par défaut DRAFT (création d'un brouillon depuis le front).
 				// Il doit valoir 1 (DRAFT) ou 2 (PENDING). NB : status est un entier, comme dans le
 				// schéma JSON et dans updateInfo()/createPublishedInfo() (incohérence corrigée ici).
-				Integer status = resource.getInteger("status");
-				if (status == null) {
-					status = 1; // DRAFT par défaut
-					resource.put("status", status);
-				}
-				if (status != 1 && status != 2) {
+				if (!normalizeAndValidateCreateStatus(resource)) {
 					JsonObject error = new JsonObject().put("error", "Status should be in DRAFT or PENDING");
 					renderJson(request, error, 400);
 					return;
 				}
+				int status = resource.getInteger("status");
 				resource.put("published", false);
 				initExpirationDate(resource);
 				Events events = status == 1 ? Events.DRAFT : Events.CREATE_AND_PENDING;
