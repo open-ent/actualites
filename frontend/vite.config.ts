@@ -1,10 +1,26 @@
 /// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react';
+import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig, loadEnv, ProxyOptions } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
+/**
+ * Premier emplacement existant des libellés du portail (cf. alias @portal-i18n).
+ */
+const portalI18nPath = () => {
+  const rel = 'portal/backend/src/main/resources/i18n/fr.json';
+  const candidates = [
+    resolve(__dirname, '../../entcore', rel), // actualites cloné à côté d'entcore
+    resolve(__dirname, '../../../libs/entcore', rel), // open-ent-mods
+  ];
+  return (
+    candidates.find((p) => existsSync(p)) ??
+    resolve(__dirname, 'src/mocks/portal-i18n.fallback.json')
+  );
+};
+
 export default ({ mode }: { mode: string }) => {
   // Checking environement files
   const envFile = loadEnv(mode, process.cwd());
@@ -89,6 +105,13 @@ export default ({ mode }: { mode: string }) => {
           __dirname,
           'node_modules/@open-ent/bootstrap/dist/images',
         ),
+        // Libellés du portail, servis par le mock /i18n. Ils vivent dans entcore,
+        // hors de ce dépôt, et son emplacement dépend de l'agencement : à côté
+        // d'actualites en clone isolé, sous libs/ dans open-ent-mods, et absent
+        // en CI (le workflow ne sort que ce dépôt). Un import relatif en dur ne
+        // peut donc pas convenir partout : on résout ici, avec repli sur un stub
+        // vide, sinon les 14 fichiers de test échouent au chargement.
+        '@portal-i18n': portalI18nPath(),
       },
     },
 
