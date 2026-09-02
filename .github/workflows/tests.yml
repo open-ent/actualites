@@ -34,7 +34,12 @@ jobs:
           pnpm config set //registry.tiptap.dev/:_authToken ${{ secrets.TIPTAP_PRO_TOKEN }}
           pnpm config set auto-install-peers true
 
-      - run: pnpm install --frozen-lockfile
+      - run: |
+          # Les @open-ent/* sont publiés sur un tag MOBILE (2.5.30-patched) : le lock
+          # fige une URL de tarball contenant le SHA du blob d'alors, que GitHub
+          # Packages rejette en 409 après republication. On re-résout ces paquets.
+          node scripts/refresh-open-ent-lock.mjs
+          pnpm install --frozen-lockfile
       - run: pnpm exec nx test
 
         env:
