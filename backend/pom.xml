@@ -15,7 +15,8 @@
     <version>3.1.5-patched</version>
     <properties>
         <jacksonDatabindVersion>2.15.2</jacksonDatabindVersion>
-        <entCoreVersion>6.14.9-patched</entCoreVersion>
+        <entCoreVersion>6.16.14-patched</entCoreVersion>
+        <entCoreLibsVersion>6.16.7-patched</entCoreLibsVersion>
         <vertxCronTimerVersion>3.0.0</vertxCronTimerVersion>
         <gatlingHighchartsVersion>2.3.1</gatlingHighchartsVersion>
         <junitVersion>4.13.2</junitVersion>
@@ -37,6 +38,11 @@
             <name>ODE Repository</name>
             <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
         </repository>
+      <repository>
+        <id>pt-releases</id>
+        <name>rct-nexus maven-releases (entcore-libs patchées)</name>
+        <url>https://rct-nexus.tech.fr/repository/maven-releases/</url>
+      </repository>
     </repositories>
 
     <dependencies>
@@ -55,7 +61,7 @@
         <dependency>
             <groupId>org.entcore</groupId>
             <artifactId>common</artifactId>
-            <version>${entCoreVersion}</version>
+            <version>${entCoreLibsVersion}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
