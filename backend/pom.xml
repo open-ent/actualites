@@ -16,7 +16,7 @@
     <properties>
         <jacksonDatabindVersion>2.15.2</jacksonDatabindVersion>
         <entCoreVersion>6.16.14-patched</entCoreVersion>
-        <entCoreLibsVersion>6.16.7-patched</entCoreLibsVersion>
+        <entCoreLibsVersion>6.16.8-patched</entCoreLibsVersion>
         <vertxCronTimerVersion>3.0.0</vertxCronTimerVersion>
         <gatlingHighchartsVersion>2.3.1</gatlingHighchartsVersion>
         <junitVersion>4.13.2</junitVersion>
