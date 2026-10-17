@@ -14,7 +14,7 @@
     <artifactId>actualites</artifactId>
     <version>3.2.10-patched</version>
     <properties>
-        <jacksonDatabindVersion>2.15.2</jacksonDatabindVersion>
+        <jacksonDatabindVersion>2.18.11</jacksonDatabindVersion>
         <entCoreVersion>6.16.14-patched</entCoreVersion>
         <entCoreLibsVersion>6.16.8-patched</entCoreLibsVersion>
         <vertxCronTimerVersion>3.0.0</vertxCronTimerVersion>
