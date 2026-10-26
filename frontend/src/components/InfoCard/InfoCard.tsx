@@ -43,7 +43,7 @@ export const InfoCard = ({ info, id }: InfoCardProps) => {
     setCollapse((collapse) => {
       if (!collapse) {
         // Scroll to top of the card when collapsing
-        id && setScrollTo(id);
+        if (id) setScrollTo(id);
       } else {
         // COCO-4432, trigger a view
         incrementViewsCounter();
@@ -56,10 +56,10 @@ export const InfoCard = ({ info, id }: InfoCardProps) => {
     setCollapse((collapse) => {
       if (!collapse) {
         // Scroll to top of the card when collapsing
-        id && setScrollTo(id);
+        if (id) setScrollTo(id);
       } else {
         // Scroll to top comment when expanding
-        id && setScrollTo(id + '-comments');
+        if (id) setScrollTo(id + '-comments');
         // COCO-4432, trigger a view
         incrementViewsCounter();
       }

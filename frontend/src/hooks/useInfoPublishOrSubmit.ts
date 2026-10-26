@@ -21,7 +21,7 @@ export function useInfoPublishOrSubmit() {
     if (!info.id) {
       throw new Error('infoId is undefined');
     }
-    let payload: UpdateInfoPayload = {};
+    const payload: UpdateInfoPayload = {};
 
     if (!info.publicationDate) {
       payload.publication_date =

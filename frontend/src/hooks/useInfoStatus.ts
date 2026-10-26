@@ -1,6 +1,10 @@
 import { InfoBase, InfoExtendedStatus, InfoStatus } from '~/models/info';
 
-export function useInfoStatus(info?: InfoBase) {
+/**
+ * Statuts dérivés d'une info. Fonction pure (aucun hook) : utilisable hors composant, par exemple dans un
+ * gestionnaire d'événement, où appeler `useInfoStatus` violerait les règles des hooks.
+ */
+export function getInfoStatus(info?: InfoBase) {
   if (!info) {
     return {
       isIncoming: false,
@@ -42,4 +46,9 @@ export function useInfoStatus(info?: InfoBase) {
       (info.status === InfoStatus.PUBLISHED && !isIncoming) ||
       (info.status === InfoStatus.DRAFT && info.numberOfComments > 0),
   };
+}
+
+/** Même résultat que `getInfoStatus`, pour les composants (conserve le nom historique). */
+export function useInfoStatus(info?: InfoBase) {
+  return getInfoStatus(info);
 }

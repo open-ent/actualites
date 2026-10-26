@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 /* Declare integrated webcomponent typings */
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace -- augmentation de typage JSX, sans équivalent ES2015
   namespace JSX {
     interface IntrinsicElements {
       'zero-md': React.DetailedHTMLProps<

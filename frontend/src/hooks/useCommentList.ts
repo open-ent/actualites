@@ -57,7 +57,7 @@ export function useCommentList(info: Info) {
     () =>
       (
         data?.map((comment) => {
-          let adaptedComment: CommentProps = {
+          const adaptedComment: CommentProps = {
             id: '' + comment._id,
             comment: comment.comment,
             authorId: comment.owner,

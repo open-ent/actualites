@@ -30,7 +30,9 @@ export async function checkHttpError<T>(promise: Promise<T>) {
 
     // Check if request was redirected to login page (content is not JSON) or an error occured
     if (!isResponseHTML && !odeServices.http().isResponseError()) return result;
-  } catch {}
+  } catch {
+    // En-têtes illisibles : on retombe sur le traitement général ci-dessous.
+  }
   // Map well-known status/text to i18n key
   const errorText = odeServices.http().isResponseError()
     ? getErrorText()

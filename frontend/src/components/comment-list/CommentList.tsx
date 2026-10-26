@@ -18,7 +18,10 @@ export const CommentList = ({
   withPagination = true,
   forPrinting = false,
 }: CommentListProps) => {
-  let { comments, type, callbacks, options, rights } = useCommentList(info);
+  const list = useCommentList(info);
+  const { comments, callbacks, options, rights } = list;
+  // `type` est réassigné plus bas (impression : lecture seule).
+  let type = list.type;
 
   if (!withPagination)
     options.maxComments = options.additionalComments =

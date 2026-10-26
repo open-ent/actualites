@@ -4,7 +4,7 @@ import { useI18n } from '~/hooks/useI18n';
 import { InfoDetails, InfoExtendedStatus } from '~/models/info';
 import { invalidateThreadQueries, useDeleteInfo } from '~/services/queries';
 import { useUpdateStatsQueryCache } from '~/services/queries/hooks/useUpdateStatsQueryCache';
-import { useInfoStatus } from './useInfoStatus';
+import { getInfoStatus } from './useInfoStatus';
 import { useQueryClient } from '@tanstack/react-query';
 
 export function useInfoDelete() {
@@ -15,7 +15,7 @@ export function useInfoDelete() {
   const [isDeleteAlertOpen, setDeleteAlertOpen] = useState(false);
   const queryClient = useQueryClient();
   const trash = (info: InfoDetails) => {
-    const { isIncoming, isExpired } = useInfoStatus(info);
+    const { isIncoming, isExpired } = getInfoStatus(info);
     const { id, thread, status } = info;
     const state = isIncoming
       ? InfoExtendedStatus.INCOMING
