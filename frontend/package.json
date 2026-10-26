@@ -15,7 +15,7 @@
     "dev:recette": "pnpm get-tokens --auto && vite",
     "get-tokens": "node scripts/get-tokens/index.cjs",
     "lint": "eslint .",
-    "pre-commit": "pnpm run format",
+    "pre-commit": "lint-staged",
     "pre-push": "pnpm run typecheck && pnpm run test",
     "prepare": "cd .. && husky frontend/.husky || true",
     "preview": "vite preview",
@@ -32,9 +32,10 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "pnpm run format",
-      "pnpm run lint"
-    ]
+      "prettier --write",
+      "eslint --fix --no-warn-ignored"
+    ],
+    "**/*.css": "prettier --write"
   },
   "dependencies": {
     "@ant-design/icons": "6.1.0",
