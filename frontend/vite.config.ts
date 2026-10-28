@@ -158,7 +158,7 @@ export default ({ mode }: { mode: string }) => {
       globals: true,
       environment: 'jsdom',
       include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-      setupFiles: ['./src/mocks/setup.ts'],
+      setupFiles: ['./src/mocks/setup-abort-signal.ts', './src/mocks/setup.ts'],
       reporters: ['default'],
       coverage: {
         reportsDirectory: './coverage/actualites',
