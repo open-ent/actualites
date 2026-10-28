@@ -66,10 +66,10 @@ public class SuperAdmlPreferencesCleanupCron implements Handler<Long> {
         Promise<List<String>> promise = Promise.promise();
 
         String query =
-            "MATCH (u:User) WHERE u.id IN {userIds} " +
+            "MATCH (u:User) WHERE u.id IN $userIds " +
             "OPTIONAL MATCH (u)-[:IN]->(:FunctionGroup {filter:'AdminLocal'})-[:DEPENDS]->(s:Structure) " +
             "WITH u, count(s) AS admlCount " +
-            "WHERE admlCount >= {minStructures} " +
+            "WHERE admlCount >= $minStructures " +
             "RETURN u.id AS id";
 
         JsonObject params = new JsonObject()
