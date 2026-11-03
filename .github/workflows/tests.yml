@@ -34,17 +34,23 @@ jobs:
           pnpm config set //registry.tiptap.dev/:_authToken ${{ secrets.TIPTAP_PRO_TOKEN }}
           pnpm config set auto-install-peers true
 
-      - run: |
+      - name: Install frontend dependencies
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.OPENENT_PACKAGES_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          TIPTAP_PRO_TOKEN: ${{ secrets.TIPTAP_PRO_TOKEN }}
+        run: |
           # Les @open-ent/* sont publiés sur un tag MOBILE (2.5.30-patched) : le lock
           # fige une URL de tarball contenant le SHA du blob d'alors, que GitHub
           # Packages rejette en 409 après republication. On re-résout ces paquets.
           node scripts/refresh-open-ent-lock.mjs
-          # Le script vient de RETIRER les résolutions @open-ent du lock : --frozen-lockfile
-          # refuse alors d'installer (« Broken lockfile: no entry for @open-ent/bootstrap »).
-          # Il faut laisser pnpm les re-résoudre, comme le fait build-and-publish.yml.
+          # Le script vient de RETIRER ces résolutions : --frozen-lockfile refuserait
+          # d'installer (« Broken lockfile: no entry for @open-ent/bootstrap »).
           pnpm install --no-frozen-lockfile
-      - run: pnpm exec nx test
 
+      - name: Run tests
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.OPENENT_PACKAGES_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TIPTAP_PRO_TOKEN: ${{ secrets.TIPTAP_PRO_TOKEN }}
+        run: pnpm exec nx test
