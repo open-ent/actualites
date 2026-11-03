@@ -39,7 +39,10 @@ jobs:
           # fige une URL de tarball contenant le SHA du blob d'alors, que GitHub
           # Packages rejette en 409 après republication. On re-résout ces paquets.
           node scripts/refresh-open-ent-lock.mjs
-          pnpm install --frozen-lockfile
+          # Le script vient de RETIRER les résolutions @open-ent du lock : --frozen-lockfile
+          # refuse alors d'installer (« Broken lockfile: no entry for @open-ent/bootstrap »).
+          # Il faut laisser pnpm les re-résoudre, comme le fait build-and-publish.yml.
+          pnpm install --no-frozen-lockfile
       - run: pnpm exec nx test
 
         env:

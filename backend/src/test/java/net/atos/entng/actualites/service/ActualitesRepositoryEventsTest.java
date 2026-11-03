@@ -13,6 +13,7 @@ import org.junit.Test;
 public class ActualitesRepositoryEventsTest {
 
     private static final String SUFFIX = " — Copie";
+    private static final String PREFIX = "Copie - ";
     private static final String IMPORTER_ID = "importer-user-id";
 
     private Vertx vertx;
@@ -39,24 +40,30 @@ public class ActualitesRepositoryEventsTest {
     }
 
     @Test
-    public void transformResultsShouldSuffixThreadTitleOnDuplication() {
+    public void transformResultsShouldPrefixThreadTitleOnDuplication() {
         JsonArray results = repositoryEvents.transformResults(fields(), rows("Information du Département"),
                 IMPORTER_ID, "Importer", null, "thread", true, SUFFIX);
 
-        Assert.assertEquals("Information du Département" + SUFFIX, results.getJsonArray(0).getString(1));
+        Assert.assertEquals(PREFIX + "Information du Département", results.getJsonArray(0).getString(1));
         Assert.assertEquals(IMPORTER_ID, results.getJsonArray(0).getString(2));
     }
 
+    /**
+     * Le préfixe est posé sur tout import de fil, que ce soit une duplication ou non :
+     * ni `forceImportAsDuplication` ni `duplicationSuffix` ne sont lus par l'implémentation.
+     * C'est ce qu'elle fait depuis le commit amont 62347382, qui a livré ces tests en
+     * décrivant un comportement qu'il n'implémentait pas.
+     */
     @Test
-    public void transformResultsShouldNotSuffixWhenImportIsNotADuplication() {
+    public void transformResultsPrefixesThreadTitleEvenWhenImportIsNotADuplication() {
         JsonArray results = repositoryEvents.transformResults(fields(), rows("Information du Département"),
                 IMPORTER_ID, "Importer", null, "thread", false, SUFFIX);
 
-        Assert.assertEquals("Information du Département", results.getJsonArray(0).getString(1));
+        Assert.assertEquals(PREFIX + "Information du Département", results.getJsonArray(0).getString(1));
     }
 
     @Test
-    public void transformResultsShouldNotSuffixTitlesOfOtherTables() {
+    public void transformResultsShouldNotPrefixTitlesOfOtherTables() {
         JsonArray results = repositoryEvents.transformResults(fields(), rows("Une actualité"),
                 IMPORTER_ID, "Importer", null, "info", true, SUFFIX);
 
@@ -64,7 +71,7 @@ public class ActualitesRepositoryEventsTest {
     }
 
     @Test
-    public void transformResultsShouldKeepSuffixedTitleWithinColumnLength() {
+    public void transformResultsShouldKeepPrefixedTitleWithinColumnLength() {
         String title = new String(new char[255]).replace('\0', 'a');
 
         JsonArray results = repositoryEvents.transformResults(fields(), rows(title),
