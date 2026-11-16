@@ -121,6 +121,13 @@
             <artifactId>edifice-falc-client-vertx</artifactId>
             <version>${edificeFalcVersion}</version>
             <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <!-- dépendance morte des broker-* 6.13-SNAPSHOT d'Edifice, disparue de leur Nexus -->
+                    <groupId>io.edifice</groupId>
+                    <artifactId>edifice-quarkus-contract-utils</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>javax.xml.bind</groupId>
